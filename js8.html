@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1 id="num">10</h1>
+<button onclick="Timing()">click me</button>
+<script>
+    var whether=false;
+    var start_time=10;
+    var div=document.getElementById('num');
+    var inteval;
+    function Timing(){
+        whether=!whether;
+        if(!whether)
+        {
+            clearInterval(inteval)
+        }else{
+            inteval=setInterval(function(){
+                start_time--;
+                if(start_time<=0)
+            {
+            start_time=10;
+        }
+        div.textContent=start_time;
+            },500)
+        }
+    }
+</script>
+</body>
+</html>
